@@ -61,7 +61,7 @@ extern "C"
  * \par Thread-safety
  *   Nodes are thread-safe objects, and so are all operations on them except for finalization.
  *   Therefore, it is safe to query the ROS graph using the same node concurrently.
- *   However, when querying topic names and types:
+ *   However, when querying topic names, types, and type hashes:
  *   - Access to the array of topic endpoint information is not synchronized.
  *     It is not safe to read or write `publishers_info`
  *     while rmw_get_publishers_info_by_topic() uses it.
